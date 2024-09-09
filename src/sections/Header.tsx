@@ -2,7 +2,7 @@ import { CutCornerButton } from "@/components/CutCornerButton";
 
 export const HeaderSection = () => {
   return (
-    <header className="sticky top-0 bg-zinc-900/50 backdrop-blur-lg">
+    <header className="sticky top-0 z-40 bg-zinc-900/50 backdrop-blur-lg">
       <div className="container">
         <div className="flex justify-between items-center h-24 md:h-28">
           <div>
