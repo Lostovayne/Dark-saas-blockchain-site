@@ -11,4 +11,5 @@ export default defineConfig({
     }),
     react(),
   ],
+  output: "hybrid",
 });
