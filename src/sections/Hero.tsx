@@ -59,7 +59,9 @@ export const HeroSection = () => {
           <div className=" h-10 w-5 outline outline-[6px] outline-fuchsia-500/10 inline-flex justify-center pt-2 rounded-full">
             <div className="h-3 w-1 bg-fuchsia-500 rounded-full"></div>
           </div>
-          <p className="uppercase text-zinc-500 font-extrabold tracking-wider">Scroll to learn more</p>
+          <p className="uppercase text-zinc-500 font-extrabold tracking-wider">
+            Scroll to learn more
+          </p>
         </div>
       </div>
     </section>

@@ -1,3 +1,4 @@
+import { TextButton } from "@/components/TextButton";
 import { twMerge } from "tailwind-merge";
 
 const cardData = [
@@ -33,7 +34,7 @@ const cardData = [
 
 const FeaturesCardsSection = () => {
   return (
-    <section className="py-24 overflow-clip -mt-28">
+    <section className="py-24 overflow-clip md:-mt-28">
       <div className="container">
         <h2 className="font-heading font-black text-4xl md:text-5xl lg:text-6xl text-center">
           Discover the future of blockchain with Blockforge.
@@ -82,20 +83,7 @@ const FeaturesCardsSection = () => {
                 <h3 className="font-heading font-black text-3xl mt-12">{title}</h3>
                 <p className="text-lg text-zinc-400 mt-4">{description}</p>
                 <div className="flex justify-between mt-12 pb-7">
-                  <button
-                    className={twMerge(
-                      "text-sm font-heading uppercase font-extrabold tracking-wider text-fuchsia-500 ",
-                      color === "lime"
-                        ? "text-lime-500"
-                        : color === "cyan"
-                          ? "text-cyan-500"
-                          : color === "violet"
-                            ? "text-violet-500"
-                            : "text-fuchsia-500"
-                    )}
-                  >
-                    Learn More
-                  </button>
+                  <TextButton color={color}>Learn More</TextButton>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -106,7 +94,11 @@ const FeaturesCardsSection = () => {
                                       -translate-x-2 group-hover:translate-x-0
                                       "
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                    />
                   </svg>
                 </div>
               </div>
