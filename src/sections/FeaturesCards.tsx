@@ -82,7 +82,7 @@ const FeaturesCardsSection = () => {
                 </div>
                 <h3 className="font-heading font-black text-3xl mt-12">{title}</h3>
                 <p className="text-lg text-zinc-400 mt-4">{description}</p>
-                <div className="flex justify-between mt-12 pb-7">
+                <div className="flex justify-between mt-12 max-md:pb-7">
                   <TextButton color={color}>Learn More</TextButton>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

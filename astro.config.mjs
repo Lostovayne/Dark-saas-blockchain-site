@@ -11,4 +11,6 @@ export default defineConfig({
     }),
     react(),
   ],
+  output: "static",
+  
 });
