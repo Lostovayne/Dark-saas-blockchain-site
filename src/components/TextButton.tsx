@@ -15,9 +15,8 @@ export const TextButton = (props: ComponentPropsWithoutRef<"button"> & { color?:
             : color === "violet"
               ? "text-violet-500"
               : "text-fuchsia-500"
-      )}
-    >
-      Learn More
+      )}>
+      {children}
     </button>
   );
 };
