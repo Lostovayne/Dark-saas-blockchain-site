@@ -1,3 +1,5 @@
+import { twMerge } from 'tailwind-merge';
+
 const testimonials = [
   {
     text: 'The user experience is phenomenal, and the support team is always there to help. Highly recommended!',
@@ -24,19 +26,21 @@ export const TestimonialsSection = () => {
   return (
     <section className='py-32 bg-zinc-800'>
       <div className='container'>
-        <div className='grid grid-cols-1 gap-16'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-8 lg:gap-12'>
           {testimonials.map((testimonial, testimonialIndex) => (
-            <blockquote key={testimonialIndex}>
-              <p className='font-heading text-3xl font-black'>&ldquo;{testimonial.text}&rdquo;</p>
+            <blockquote
+              key={testimonialIndex}
+              className={twMerge(testimonialIndex === 2 && 'md:hidden lg:block')}>
+              <p className='font-heading text-3xl lg:text-4xl font-black'>
+                &ldquo;{testimonial.text}&rdquo;
+              </p>
               <cite className='mt-8 block'>
                 <div className='flex gap-3 items-center'>
                   <div>
                     <div
-                      className='size-16 bg-zinc-700 rounded-full'
+                      className='size-16 bg-zinc-700 rounded-full bg-cover'
                       style={{
                         backgroundImage: `url(${testimonial.avatarImage})`,
-                        backgroundPosition: 'center',
-                        backgroundSize: 'cover',
                       }}
                     />
                   </div>
