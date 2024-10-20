@@ -1,14 +1,15 @@
 ---
-import { LatestPosts } from "@/components/LatestPosts";
-import FeaturesCardsSection from "@/sections/FeaturesCards";
-import FeaturesGrid from "@/sections/FeaturesGrid";
-import { HeaderSection } from "@/sections/Header";
-import { HeroSection } from "@/sections/Hero";
-import DefaultLayout from "../layouts/Default.astro";
+import { TestimonialsSection } from '@/sections/Testimonials';
+import { LatestPosts } from '@components/LatestPosts';
+import DefaultLayout from '@layouts/Default.astro';
+import FeaturesCardsSection from '@sections/FeaturesCards';
+import FeaturesGrid from '@sections/FeaturesGrid';
+import { HeaderSection } from '@sections/Header';
+import { HeroSection } from '@sections/Hero';
 
-import { getCollection } from "astro:content";
+import { getCollection } from 'astro:content';
 
-const posts = await getCollection("blog");
+const posts = await getCollection('blog');
 const latestPosts = posts
   .sort((a, b) => {
     if (a.data.pubDate.valueOf() === b.data.pubDate.valueOf()) return 0;
@@ -23,4 +24,5 @@ const latestPosts = posts
   <FeaturesCardsSection />
   <FeaturesGrid />
   <LatestPosts latestPosts={latestPosts} />
+  <TestimonialsSection />
 </DefaultLayout>
