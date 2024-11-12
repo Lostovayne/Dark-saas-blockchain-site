@@ -1,4 +1,5 @@
 ---
+import { CallToActionSection } from '@/sections/CallToAction';
 import { TestimonialsSection } from '@/sections/Testimonials';
 import { LatestPosts } from '@components/LatestPosts';
 import DefaultLayout from '@layouts/Default.astro';
@@ -11,18 +12,19 @@ import { getCollection } from 'astro:content';
 
 const posts = await getCollection('blog');
 const latestPosts = posts
-  .sort((a, b) => {
-    if (a.data.pubDate.valueOf() === b.data.pubDate.valueOf()) return 0;
-    return a.data.pubDate.valueOf() > b.data.pubDate.valueOf() ? -1 : 1;
-  })
-  .slice(0, 4);
+	.sort((a, b) => {
+		if (a.data.pubDate.valueOf() === b.data.pubDate.valueOf()) return 0;
+		return a.data.pubDate.valueOf() > b.data.pubDate.valueOf() ? -1 : 1;
+	})
+	.slice(0, 4);
 ---
 
 <DefaultLayout>
-  <HeaderSection />
-  <HeroSection />
-  <FeaturesCardsSection />
-  <FeaturesGrid />
-  <LatestPosts latestPosts={latestPosts} />
-  <TestimonialsSection />
+	<HeaderSection />
+	<HeroSection />
+	<FeaturesCardsSection />
+	<FeaturesGrid />
+	<LatestPosts latestPosts={latestPosts} />
+	<TestimonialsSection />
+	<CallToActionSection />
 </DefaultLayout>
